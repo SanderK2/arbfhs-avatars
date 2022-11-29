@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to our Vue.js App"/>
+  <AvatarProfile :profileObject="profileObject"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AvatarProfile from './pages/AvatarProfile.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AvatarProfile
+  },
+  data() {
+    return {
+        profileObject: {
+          name: "Brødskive",
+          ingress: "Drag, sminke, non-binary rage.",
+          aboutMe: "Jeg liker å danse og sånn da. Fester er kult også.",
+          profileImg: "https://gfx.nrk.no/HliIdgQAG0Fs-Pyur2HzUQdvQ_HP06QIPyWNi7h2vOXQ",
+        }
+    }
   }
 }
 </script>
@@ -19,8 +28,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  margin: 0;
 }
 </style>
