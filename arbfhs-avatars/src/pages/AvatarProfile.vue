@@ -21,21 +21,19 @@
             <p>{{profileObject.aboutMe}}</p>
         </div>
         <div class="moreAbout">
-            Lorem ipsizzle fo the bizzle amizzle, consectetuer adipiscing ma nizzle. Fizzle velizzle, dang volutpizzle, suscipizzle quis, gravida vizzle, arcu. Pellentesque fo shizzle tortor. Sed fo shizzle. Stuff izzle doggy dapibizzle turpis tempizzle nizzle. Maurizzle pellentesque phat et turpis. izzle tortor. Pellentesque eleifend rhoncizzle mofo. hac phat platea yippiyo. Bizzle dapibus. Sizzle dope rizzle, pretium the bizzle, fo shizzle ac, eleifend vitae, boom shackalack. Gangster suscipit. Integer sempizzle velizzle sizzle own yo'.
+            Lorem ipsizzle fo the bizzle amizzle, consectetuer adipiscing ma nizzle. Fizzle velizzle, dang volutpizzle, suscipizzle quis, gravida vizzle, arcu. Pellentesque fo shizzle tortor. Sed fo shizzle. Stuff izzle doggy dapibizzle turpis tempizzle nizzle.
+        </div>
+    </div>
+    <div class="photoSection">
+        <h3>BILDEGALLERI</h3>
+        <div class="photos">
+            <div v-for="(imgg, index) in profileObject.imageReel" :key="index">
+                <img :src="imgg" alt="">
+            </div>
         </div>
     </div>
     </div>
-    <div class="otherProfiles">
-        <div class="profileCircle currentProfile">
-            <img :src="profileObject.profileImg" alt="">
-        </div>
-        <div class="profileCircle">
-            <img :src="profileObject.profileImg" alt="">
-        </div>
-        <div class="profileCircle">
-            <img :src="profileObject.profileImg" alt="">
-        </div>
-    </div>
+    
     </div>
     
 </template>
@@ -49,20 +47,17 @@ export default {
             required: true
         }
     },
-    setup() {
-        
-    },
 }
 </script>
 
 <style>
     .blergh {
-        padding-top: 9em;
+        padding-top: 8em;
         height: 15em;
-        width: 100vw;
         display: flex;
         align-items: flex-end;
         color: white;
+        padding-bottom: 1em;
     }
 
     .blergh div {
@@ -141,5 +136,26 @@ export default {
         background-color: #264653;
         color: white;
         padding: 20px;
+    }
+
+    .photoSection {
+        padding: 2vw 3vw 3vw 3vw;
+        background-color: #e9c46a;
+    }
+
+    .photoSection h3 {
+        font-size: 50px;
+        margin: 0;
+        text-align: center;
+        color: #264653;
+        letter-spacing: 2vw;
+    }
+
+    .photos {
+        display: flex;
+    }
+
+    .photos img {
+        width: 28vw;
     }
 </style>
