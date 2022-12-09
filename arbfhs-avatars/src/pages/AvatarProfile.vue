@@ -5,7 +5,7 @@
         <div>
 
         </div>
-        <img class="header-image" :src="profileObject.profileImg" alt="">
+        <img class="header-image" :src="profileObject.backgroundImg" alt="">
         <div class="blergh">
             <img :src="profileObject.profileImg" alt="" class="profile-pic">
             <div>
@@ -21,7 +21,7 @@
             <p>{{profileObject.aboutMe}}</p>
         </div>
         <div class="moreAbout">
-            Lorem ipsizzle fo the bizzle amizzle, consectetuer adipiscing ma nizzle. Fizzle velizzle, dang volutpizzle, suscipizzle quis, gravida vizzle, arcu. Pellentesque fo shizzle tortor. Sed fo shizzle. Stuff izzle doggy dapibizzle turpis tempizzle nizzle.
+            {{ profileObject.text }}
         </div>
     </div>
     <div class="photoSection">
@@ -66,6 +66,7 @@ export default {
 
     h1 {
         margin: 0;
+        filter: drop-shadow(4px 4px 10px black);
     }
 
     h2, p {
@@ -90,6 +91,7 @@ export default {
         vertical-align: middle;
         display: block;
         overflow: hidden;
+        filter: drop-shadow(4px 4px 10px black);
     }
 
     .mainProfile {
@@ -107,10 +109,14 @@ export default {
     .otherProfiles {
         width: 10vw;
         padding-top: 10px;
-        background-color: #264653;
+        background-color: #f1faee;
         display: flex;
         flex-direction: column;
-        align-items: center;
+    }
+
+    .profileCircle {
+        border-left: solid 10px #f1faee;
+        padding: 3px;
     }
 
     .profileCircle img {
@@ -121,41 +127,46 @@ export default {
         cursor: pointer;
     }
 
-    .currentProfile img {
-        border: solid 3px #2a9d8f;
+    .currentProfile {
+        border-left: solid 10px #e63946;
     }
 
     .about {
         width: 45vw;
-        background-color: #e76f51;
+        background-color: #e63946;
         padding: 20px;
     }
 
     .moreAbout {
         width: 45vw;
-        background-color: #264653;
+        background-color: #457b9d;
         color: white;
         padding: 20px;
     }
 
     .photoSection {
         padding: 2vw 3vw 3vw 3vw;
-        background-color: #e9c46a;
+        background-color: #457b9d;
     }
 
     .photoSection h3 {
         font-size: 50px;
         margin: 0;
         text-align: center;
-        color: #264653;
+        color: #f1faee;
         letter-spacing: 2vw;
+        margin-bottom: 2vw;
     }
 
     .photos {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .photos img {
-        width: 28vw;
+        width: 25em;
+        height: 15em;
+        object-fit: cover;
     }
 </style>
