@@ -114,12 +114,12 @@ export default {
         flex-direction: column;
     }
 
-    .profileCircle {
+    .otherProfiles div {
         border-left: solid 10px #f1faee;
         padding: 3px;
     }
 
-    .profileCircle img {
+    .otherProfiles div img {
         width: 8vw;
         height: 8vw;
         object-fit: cover;
@@ -128,7 +128,7 @@ export default {
     }
 
     .currentProfile {
-        border-left: solid 10px #e63946;
+        border-left: solid 10px #e63946!important;
     }
 
     .about {

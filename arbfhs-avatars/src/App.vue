@@ -1,13 +1,13 @@
 <template>
   <AvatarProfile :profileObject="profile"/>
   <div class="otherProfiles">
-        <div class="profileCircle currentProfile" @click="changeProfile('0')">
+        <div :class="activeProfile == '0' ? 'currentProfile':''" @click="changeProfile('0')">
             <img :src="profileObject['0'].profileImg" alt="">
         </div>
-        <div class="profileCircle" @click="changeProfile('1')">
+        <div :class="activeProfile == '1' ? 'currentProfile':''" @click="changeProfile('1')">
             <img :src="profileObject['1'].profileImg" alt="">
         </div>
-        <div class="profileCircle" @click="changeProfile('2')">
+        <div :class="activeProfile == '2' ? 'currentProfile':''" @click="changeProfile('2')">
             <img :src="profileObject['2'].profileImg" alt="">
         </div>
     </div>
