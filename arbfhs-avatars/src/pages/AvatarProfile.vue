@@ -28,7 +28,7 @@
         <h3>BILDEGALLERI</h3>
         <div class="photos">
             <div v-for="(imgg, index) in profileObject.imageReel" :key="index">
-                <img :src="imgg" alt="">
+                <a :href="imgg" target="_blank"><img :src="imgg" alt=""></a>
             </div>
         </div>
     </div>
